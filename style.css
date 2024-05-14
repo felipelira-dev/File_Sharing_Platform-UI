@@ -308,6 +308,11 @@ body{
     cursor: pointer;
 }
 
+.right-section .widgets{
+    display: flex;
+    flex-direction: column;
+}
+
 .right-section .widgets .disk{
     background: #fff;
     margin-top: 35px;
@@ -356,13 +361,266 @@ body{
     margin-bottom: 10px;
 }
 
-.right-section .widgets .disk .ingo h5 span{
+.right-section .widgets .disk h5 span{
     color: #364670;
 }
 
-..right-section .widgets .disk .info p{
+.right-section .widgets .disk .info p{
     font-size: 14px;
     color: #999;
     font-weight: 500;
 }
 
+.right-section .widgets .bottom{
+    display: flex;
+    flex-direction: column;
+}
+
+.right-section .widgets .bottom button{
+    border: none;
+    background:#1976d2;
+    color: #fff;
+    margin: 20px 0;
+    font-size: 20px;
+    padding: 14px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.right-section .widgets .bottom button:hover{
+    background: #0d47a1;
+}
+.right-section .widgets .bottom .premium{
+    background: #fff;
+    padding: 25px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 16px;
+    border:  2px solid transparent;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+    transition: all 0.3s ease;
+}
+
+.right-section .widgets .bottom .premium:hover{
+    box-shadow: none;
+    border-color: #999;
+}
+
+.right-section .widgets .bottom .premium .title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.right-section .widgets .bottom .premium .title h5{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.right-section .widgets .bottom .premium .title i{
+    font-size: 30px;
+    padding: 10px;
+    background: #1976d2;
+    color: #fff;
+    border-radius: 14px;
+}
+
+.right-section .widgets .bottom .premium .title p{
+    color: #999;
+    font-size: 16px;
+    line-height: 1.4rem;
+}
+
+@media screen and (max-width: 1230px){
+
+    .left-section{
+        width: 90px;
+    }
+    
+    .left-section h2{
+        font-size: 17px;
+    }
+
+    .left-section .sidebar .item{
+        justify-content: center;
+    }
+
+    .left-section .sidebar .item h3,
+    .left-section .sign-out h3{
+        display: none;
+    }
+
+    .left-section .sidebar .item i,
+    .left-section .sign-out i{
+        font-size: 16px;
+    }
+
+    .main .quick-access{
+        justify-content: space-between;
+    }
+
+    .main .quick-access .item{
+        width: 23%;
+    }
+
+    .main .quick-access .item i{
+        font-size: 36px;
+    }
+
+    .main .quick-access .item h5{
+        font-size: 16px;
+    }
+
+    .main .quick-access .item p{
+        font-size: 12px;
+    }
+
+    .right-section .widgets .disk{
+        height: 270px;
+    }
+
+    .right-section .widgets .disk .progress .progress-bar{
+        width: 120px;
+        height: 120px;
+    }
+
+    .right-section .widgets .disk .info h5{
+        font-size: 18px;
+    }
+
+    .right-section .widgets .bottom button{
+        font-size: 17px;
+        padding: 12px;
+    }
+
+    .right-section .widgets .bottom .premium .title h5{
+        font-size: 17px;
+    }
+
+    .right-section .widgets .bottom .premium .title i{
+        font-size: 26px;
+    }
+
+    .right-section .widgets .bottom .premium p{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 992px){
+
+    .left-section{
+        position: absolute;
+        width: 160px;
+        left: -160px;
+        z-index: 1000;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .left-section .sidebar .item{
+        justify-content: start;
+    }
+
+    .left-section .sidebar .item h3, 
+    .left-section.sign-out h3{
+        display: block;
+    }
+
+    .left-section .sidebar .item i,
+    .left-section .sign-out i{
+        font-size: 22px;
+    }
+
+    .main,
+    .right-section{
+        padding: 15px;
+    }
+
+    .main .header{
+        gap: 10px;
+    }
+
+    .main .header .icon-btns i#menu-btn{
+        display: block;
+    }
+
+    .main .quick-access .item p{
+        text-align: center;
+    }
+
+    .main table tbody tr td.name,
+    .main table tbody tr td.extension,
+    .main table tbody tr td.size{
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    body{
+        flex-direction: column;
+    }
+
+    .main{
+        padding: 26px 15px 0;
+    }
+
+    .main .header{
+        justify-content: start;
+    }
+
+    .main .header .search{
+        width: 30%;
+    }
+
+    .right-section .profile{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    .right-section .widgets{
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .right-section .widgets .disk{
+        width: 48%;
+    }
+
+    .right-section .widgets .bottom{
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .right-section .widgets .bottom button{
+        margin: 0;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    
+    .main{
+        padding: 100px 15px 0;
+    }
+
+    .main .header .search{
+        width: 68%;
+    }
+
+    .right-section .profile{
+        width: 94%;
+    }
+
+    .right-section .widgets .disk .info h5{
+        font-size: 14px;
+    }
+
+    .right-section .widgets .disk .info p{
+        font-size: 13px;
+    }
+
+}
